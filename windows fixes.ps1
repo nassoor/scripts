@@ -36,7 +36,7 @@ $Bloatware = @(
 
 Write-Host "Removing Bloatware"
 
-ForEach ($Bloat in $Bloatware)
+foreach ($Bloat in $Bloatware)
 {
     $Packages = Get-AppxPackage -AllUsers -Name $Bloat
 
@@ -68,3 +68,5 @@ ForEach ($Bloat in $Bloatware)
     }
 }
 Stop-Transcript
+
+# the foreach loop is a modified version from: https://learn.microsoft.com/en-us/archive/blogs/deploymentguys/removing-windows-8-1-built-in-applications
